@@ -21,7 +21,7 @@ describe('Testes do componente FavoritePokemons', () => {
     expect(text).toBeInTheDocument();
   });
 
-  test('Teste se são exibidos todos os cards de pokémons favoritados', () => {
+  test('Teste se são exibidos todos os cards de pokemons favoritados', () => {
     renderWithRouter(<FavoritePokemons pokemons={ FAVORITE_POKEMON } />);
     const fav = screen.getByRole('img', { name: /pikachu is marked as favorite/i });
     expect(fav).toBeInTheDocument();

@@ -16,7 +16,7 @@ const POKEMON = {
 };
 
 describe('Testes do componente Pokemon', () => {
-  test('Teste se é renderizado um card com as informações de determinado pokémon', () => {
+  test('Teste se é renderizado um card com as informações de determinado pokemon', () => {
     renderWithRouter(<Pokemon pokemon={ POKEMON } isFavorite />);
     const name = screen.getByText(/pikachu/i);
     expect(name).toBeInTheDocument();
@@ -31,7 +31,7 @@ describe('Testes do componente Pokemon', () => {
     expect(img.alt).toBe('Pikachu sprite');
   });
 
-  test('O link deve possuir a URL /pokemons/id, onde o id é do pokémon exibido', () => {
+  test('O link deve possuir a URL /pokemons/id, onde o id é do pokemon exibido', () => {
     renderWithRouter(<Pokemon pokemon={ POKEMON } isFavorite />);
     const linkDetails = screen.getByRole('link', { name: /more details/i });
     expect(linkDetails).toBeInTheDocument();
@@ -39,7 +39,7 @@ describe('Testes do componente Pokemon', () => {
     expect(id).toBe(POKEMON.id);
   });
 
-  test('Ao clicar no link, redireciona para a página de detalhes de pokémon', () => {
+  test('Ao clicar no link, redireciona para a página de detalhes de pokemon', () => {
     const { history } = renderWithRouter(
       <Pokemon pokemon={ POKEMON } isFavorite showDetailsLink />,
     );
@@ -49,7 +49,7 @@ describe('Testes do componente Pokemon', () => {
     expect(pathname).toBe('/pokemons/25');
   });
 
-  test('Teste se existe um ícone de estrela nos pokémons favoritados', () => {
+  test('Teste se existe um ícone de estrela nos pokemons favoritados', () => {
     renderWithRouter(
       <Pokemon pokemon={ POKEMON } isFavorite showDetailsLink />,
     );

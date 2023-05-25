@@ -67,7 +67,7 @@ describe('Testes do componente Pokedex', () => {
     expect.assertions(maxAssertions);
   });
 
-  test('Selecionado um botão, deve circular apenas pelos pokémons daquele tipo', () => {
+  test('Selecionado um botão, deve circular apenas pelos pokemons daquele tipo', () => {
     renderWithRouter(
       <Pokedex
         isPokemonFavoriteById={ isFavorite }
